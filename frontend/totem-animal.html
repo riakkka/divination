@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тотемное животное - Погадай.Ру</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 class="logo">Погадай.Ру</h1>
+        </header>
+
+        <h2 class="subtitle">Тотемное животное</h2>
+
+        <div class="content">
+            <div class="sidebar">
+                <div class="menu-item" onclick="location.href='index.html'">← Главная</div>
+                <div class="menu-item" onclick="location.href='stones.html'">Камни души</div>
+                <div class="menu-item" onclick="location.href='eastern-horoscope.html'">Восточный гороскоп</div>
+                <div class="menu-item active">Тотемное животное</div>
+            </div>
+
+            <div class="main-content-page">
+                <div class="content-block-large">
+                    <div class="content-title">Найдите своего духовного проводника</div>
+                    <div class="content-text">
+                        Тотемные животные - это духовные проводники, которые сопровождают нас по жизни, даря мудрость, силу и защиту. В различных культурах мира животные считались носителями особых энергий и качеств, которыми они могут поделиться с человеком.
+                        
+                        <br><br>
+                        
+                        Каждое животное-тотем обладает уникальными характеристиками: волк дарит верность и интуицию, орел - силу и высокое видение, медведь - защиту и целительную энергию, лиса - хитрость и адаптивность.
+                        
+                        <br><br>
+                        
+                        Ваше тотемное животное поможет:
+                        <br>• Раскрыть скрытые способности и таланты
+                        <br>• Найти жизненный путь и предназначение
+                        <br>• Получить защиту в трудные моменты
+                        <br>• Развить интуицию и духовное восприятие
+                        <br>• Обрести внутреннюю силу и уверенность
+                        
+                        <br><br>
+                        
+                        Определить своего тотемного животного можно различными способами: через медитацию, анализ снов, наблюдение за природой или специальные духовные практики.
+                    </div>
+                    <div class="galaxy-image"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        .main-content-page {
+            width: 74%;
+            display: flex;
+            justify-content: center;
+        }
+        
+        .content-block-large {
+            width: 100%;
+            background-color: rgba(31, 9, 61, 0.7);
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 0 15px rgba(138, 43, 226, 0.2);
+        }
+        
+        .menu-item.active {
+            background-color: rgba(147, 112, 219, 0.3);
+            border-left: 3px solid #9370DB;
+        }
+        
+        @media (max-width: 768px) {
+            .content {
+                flex-direction: column;
+            }
+            
+            .sidebar, .main-content-page {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</body>
+</html>

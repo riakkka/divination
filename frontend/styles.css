@@ -1,0 +1,297 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #0c0014;
+    color: #e6d9ff;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="400" height="400" viewBox="0 0 100 100"><rect width="100" height="100" fill="%230c0014"/><circle cx="10" cy="10" r="0.5" fill="%23ffffff20"/><circle cx="30" cy="40" r="0.3" fill="%23ffffff20"/><circle cx="70" cy="30" r="0.4" fill="%23ffffff20"/><circle cx="45" cy="80" r="0.2" fill="%23ffffff20"/><circle cx="85" cy="70" r="0.3" fill="%23ffffff20"/></svg>');
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.header {
+    text-align: center;
+    padding: 20px 0;
+    background-color: rgba(31, 9, 61, 0.8);
+    border-radius: 15px;
+    margin-bottom: 30px;
+    box-shadow: 0 0 20px rgba(138, 43, 226, 0.3);
+    position: relative;
+}
+
+.logo {
+    font-size: 42px;
+    font-weight: 300;
+    letter-spacing: 2px;
+    color: #f0f0f0;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+.subtitle {
+    text-align: center;
+    font-size: 22px;
+    margin: 15px 0 30px;
+    color: #d1c4e9;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.sidebar {
+    width: 24%;
+    background-color: rgba(31, 9, 61, 0.7);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 0 15px rgba(138, 43, 226, 0.2);
+}
+
+.main-content {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.wheel-container {
+    width: 100%;
+    max-width: 500px;
+    aspect-ratio: 1/1;
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.zodiac-circle {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 2px solid #9370DB;
+    position: relative;
+    box-shadow: 0 0 30px rgba(147, 112, 219, 0.4);
+}
+
+.center-point {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: #ffd700;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 10px gold;
+    z-index: 2;
+}
+
+/* Позиционирование кнопок зодиака по кругу */
+.zodiac-button {
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: rgba(31, 9, 61, 0.6);
+    border: 1px solid rgba(147, 112, 219, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 1;
+    transform: translate(-50%, -50%);
+}
+
+/* Расположение кнопок по кругу с шагом в 30 градусов */
+.zodiac-button:nth-child(2) { /* Овен - 0° */
+    top: 50%;
+    left: calc(50% + 42%);
+}
+
+.zodiac-button:nth-child(3) { /* Телец - 30° */
+    top: calc(50% - 21%);
+    left: calc(50% + 36.6%);
+}
+
+.zodiac-button:nth-child(4) { /* Близнецы - 60° */
+    top: calc(50% - 36.6%);
+    left: calc(50% + 21%);
+}
+
+.zodiac-button:nth-child(5) { /* Рак - 90° */
+    top: calc(50% - 42%);
+    left: 50%;
+}
+
+.zodiac-button:nth-child(6) { /* Лев - 120° */
+    top: calc(50% - 36.6%);
+    left: calc(50% - 21%);
+}
+
+.zodiac-button:nth-child(7) { /* Дева - 150° */
+    top: calc(50% - 21%);
+    left: calc(50% - 36.6%);
+}
+
+.zodiac-button:nth-child(8) { /* Весы - 180° */
+    top: 50%;
+    left: calc(50% - 42%);
+}
+
+.zodiac-button:nth-child(9) { /* Скорпион - 210° */
+    top: calc(50% + 21%);
+    left: calc(50% - 36.6%);
+}
+
+.zodiac-button:nth-child(10) { /* Стрелец - 240° */
+    top: calc(50% + 36.6%);
+    left: calc(50% - 21%);
+}
+
+.zodiac-button:nth-child(11) { /* Козерог - 270° */
+    top: calc(50% + 42%);
+    left: 50%;
+}
+
+.zodiac-button:nth-child(12) { /* Водолей - 300° */
+    top: calc(50% + 36.6%);
+    left: calc(50% + 21%);
+}
+
+.zodiac-button:nth-child(13) { /* Рыбы - 330° */
+    top: calc(50% + 21%);
+    left: calc(50% + 36.6%);
+}
+
+.zodiac-button:hover {
+    background-color: rgba(147, 112, 219, 0.3);
+    border: 1px solid rgba(255, 215, 0, 0.5);
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.4);
+}
+
+.zodiac-symbol {
+    color: #ffd700;
+    font-size: 30px;
+    text-shadow: 0 0 8px rgba(255, 215, 0, 0.5);
+}
+
+.zodiac-label {
+    color: #ffd700;
+    font-size: 12px;
+    font-weight: bold;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
+    text-align: center;
+    margin-top: 5px;
+}
+
+.content-block {
+    width: 24%;
+    background-color: rgba(31, 9, 61, 0.7);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 0 15px rgba(138, 43, 226, 0.2);
+}
+
+.menu-item {
+    padding: 12px 10px;
+    margin-bottom: 8px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border-left: 3px solid transparent;
+}
+
+.menu-item:hover {
+    background-color: rgba(147, 112, 219, 0.3);
+    border-left: 3px solid #9370DB;
+}
+
+.content-title {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #d1c4e9;
+    font-weight: 600;
+}
+
+.content-text {
+    margin-top: 20px;
+    line-height: 1.6;
+}
+
+.compatibility {
+    margin-top: 30px;
+    padding: 15px;
+    background-color: rgba(31, 9, 61, 0.8);
+    border-radius: 15px;
+    text-align: center;
+}
+
+.compatibility-text {
+    cursor: pointer;
+    padding: 10px;
+    transition: all 0.2s ease;
+}
+
+.compatibility-text:hover {
+    color: #ffd700;
+    text-shadow: 0 0 5px rgba(255, 215, 0, 0.4);
+}
+
+.galaxy-image {
+    width: 100%;
+    height: 250px;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="300" height="300" viewBox="0 0 100 100"><defs><radialGradient id="rgrad" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:%23ff6ec7;stop-opacity:0.7" /><stop offset="30%" style="stop-color:%239370DB;stop-opacity:0.6" /><stop offset="70%" style="stop-color:%234B0082;stop-opacity:0.5" /><stop offset="100%" style="stop-color:%23000033;stop-opacity:0.8" /></radialGradient></defs><ellipse cx="50" cy="50" rx="50" ry="25" fill="url(%23rgrad)" transform="rotate(45, 50, 50)"/></svg>');
+    background-size: cover;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column;
+    }
+    
+    .sidebar, .main-content, .content-block {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    
+    .zodiac-button {
+        width: 60px;
+        height: 60px;
+    }
+}
+
+@media (max-width: 600px) {
+    .zodiac-button {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .zodiac-symbol {
+        font-size: 24px;
+    }
+    
+    .zodiac-label {
+        font-size: 10px;
+    }
+}
+
+.menu-item {
+    /* ... существующие стили ... */
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.menu-item:hover {
+    /* ... существующие стили ... */
+    transform: translateX(5px);
+}

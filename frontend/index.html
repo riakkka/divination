@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Погадай.Ру - Fortune Telling & Astrology</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 class="logo">Погадай.Ру</h1>
+        </header>
+
+        <h2 class="subtitle">Гороскоп на сегодня!</h2>
+
+        <div class="content">
+            <div class="sidebar">
+                <div class="menu-item" onclick="location.href='stones.html'">Камни души</div>
+                <div class="menu-item" onclick="location.href='eastern-horoscope.html'">Восточный гороскоп</div>
+                <div class="menu-item" onclick="location.href='totem-animal.html'">Тотемное животное</div>
+            </div>
+
+            <div class="main-content">
+                <div class="wheel-container">
+                    <div class="zodiac-circle">
+                        <div class="center-point"></div>
+
+                        <!-- 12 Zodiac buttons positioned like clock numbers -->
+                        <div class="zodiac-button" data-sign="Овен">
+                            <span class="zodiac-symbol">♈</span>
+                            <span class="zodiac-label">Овен</span>
+                        </div>
+                        <div class="zodiac-button" data-sign="Телец">
+                            <span class="zodiac-symbol">♉</span>
+                            <span class="zodiac-label">Телец</span>
+                        </div>
+                        <div class="zodiac-button" data-sign="Близнецы">
+                            <span class="zodiac-symbol">♊</span>
+                            <span class="zodiac-label">Близнецы</span>
+                        </div>
+                        <div class="zodiac-button" data-sign="Рак">
+                            <span class="zodiac-symbol">♋</span>
+                            <span class="zodiac-label">Рак</span>
+                        </div>
+                        <div class="zodiac-button" data-sign="Лев">
+                            <span class="zodiac-symbol">♌</span>
+                            <span class="zodiac-label">Лев</span>
+                        </div>
+                        <div class="zodiac-button" data-sign="Дева">
+                            <span class="zodiac-symbol">♍</span>
+                            <span class="zodiac-label">Дева</span>
+                        </div>
+                        <div class="zodiac-button" data-sign="Весы">
+                            <span class="zodiac-symbol">♎</span>
+                            <span class="zodiac-label">Весы</span>
+                        </div>
+                        <div class="zodiac-button" data-sign="Скорпион">
+                            <span class="zodiac-symbol">♏</span>
+                            <span class="zodiac-label">Скорпион</span>
+                        </div>
+                        <div class="zodiac-button" data-sign="Стрелец">
+                            <span class="zodiac-symbol">♐</span>
+                            <span class="zodiac-label">Стрелец</span>
+                        </div>
+                        <div class="zodiac-button" data-sign="Козерог">
+                            <span class="zodiac-symbol">♑</span>
+                            <span class="zodiac-label">Козерог</span>
+                        </div>
+                        <div class="zodiac-button" data-sign="Водолей">
+                            <span class="zodiac-symbol">♒</span>
+                            <span class="zodiac-label">Водолей</span>
+                        </div>
+                        <div class="zodiac-button" data-sign="Рыбы">
+                            <span class="zodiac-symbol">♓</span>
+                            <span class="zodiac-label">Рыбы</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="compatibility">
+                    <div class="content-title">Совместимость</div>
+                    <div class="compatibility-text">Выберите знак для анализа совместимости</div>
+                </div>
+            </div>
+
+            <div class="content-block">
+                <div class="content-title">Ваш гороскоп</div>
+                <div class="content-text">
+                    Выберите знак зодиака на колесе слева, чтобы получить персональный гороскоп на сегодня.
+                </div>
+                <div class="galaxy-image"></div>
+            </div>
+        </div>
+    </div>
+
+<link rel="stylesheet" href="/styles.css">
+<script src="/script.js"></script>
+</body>
+</html>

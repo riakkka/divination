@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Камни души - Погадай.Ру</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 class="logo">Погадай.Ру</h1>
+        </header>
+
+        <h2 class="subtitle">Камни души</h2>
+
+        <div class="content">
+            <div class="sidebar">
+                <div class="menu-item" onclick="location.href='index.html'">← Главная</div>
+                <div class="menu-item active">Камни души</div>
+                <div class="menu-item" onclick="location.href='eastern-horoscope.html'">Восточный гороскоп</div>
+                <div class="menu-item" onclick="location.href='totem-animal.html'">Тотемное животное</div>
+            </div>
+
+            <div class="main-content-page">
+                <div class="content-block-large">
+                    <div class="content-title">Откройте силу камней для вашей души</div>
+                    <div class="content-text">
+                        Каждый человек связан с определенными камнями и минералами, которые могут усилить его энергию, принести удачу и гармонию. Камни души - это древняя практика, которая помогает найти свой персональный талисман.
+                        
+                        <br><br>
+                        
+                        Камни могут помочь в:
+                        <br>• Привлечении любви и удачи
+                        <br>• Защите от негативной энергии  
+                        <br>• Усилении интуции и духовных способностей
+                        <br>• Достижении внутренней гармонии
+                        <br>• Улучшении здоровья и жизненной энергии
+                    </div>
+                    <div class="galaxy-image"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        .main-content-page {
+            width: 74%;
+            display: flex;
+            justify-content: center;
+        }
+        
+        .content-block-large {
+            width: 100%;
+            background-color: rgba(31, 9, 61, 0.7);
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 0 15px rgba(138, 43, 226, 0.2);
+        }
+        
+        .menu-item.active {
+            background-color: rgba(147, 112, 219, 0.3);
+            border-left: 3px solid #9370DB;
+        }
+        
+        @media (max-width: 768px) {
+            .content {
+                flex-direction: column;
+            }
+            
+            .sidebar, .main-content-page {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</body>
+</html>
